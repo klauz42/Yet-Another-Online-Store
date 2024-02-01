@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/button_brand"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/button_add_to_cart_height"
+        android:background="@drawable/button_large_background"
+        android:gravity="start"
+        android:paddingStart="@dimen/button_add_to_cart_padding_horizontal"
+        android:paddingEnd="@dimen/button_add_to_cart_padding_horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/price_with_discount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/LargeButtonTextAppearance"
+            android:layout_marginEnd="8dp"
+            tools:text="599₽" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.DiagonalStrikeTextView
+            android:id="@+id/price"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:textAppearance="@style/ProductPriceTextStyle"
+            tools:text="899 ₽" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/add_to_cart"
+            style="@style/LargeButtonTextAppearance"/>
+    </LinearLayout>
+</layout>

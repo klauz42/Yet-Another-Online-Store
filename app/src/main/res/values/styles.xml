@@ -1,2 +1,162 @@
 <?xml version="1.0" encoding="utf-8"?>
-<resources></resources>
+<resources>
+    <!--toolbars-->
+    <style name="ToolbarStyle" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
+        <item name="android:background">@color/toolbar_color</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">?attr/actionBarSize</item>
+    </style>
+    <style name="FavoritesToolbarStyle" parent="ToolbarStyle">
+        <item name="contentInsetStart">@dimen/appbar_content_inset</item>
+        <item name="contentInsetStartWithNavigation">@dimen/appbar_content_inset</item>
+    </style>
+    <style name="ToolbarTitleTextAppearance" parent="Title1Style"/>
+    <style name="BaseTitleTextViewStyle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textAppearance">@style/ToolbarTitleTextAppearance</item>
+    </style>
+    <style name="MainTitleTextViewStyle" parent="BaseTitleTextViewStyle">
+        <item name="android:layout_gravity">center</item>
+    </style>
+    <style name="FavoritesTitleTextViewStyle" parent="BaseTitleTextViewStyle">
+        <item name="android:layout_gravity">start</item>
+    </style>
+
+    <style name="ImageButtonWithoutBackgroundStyle" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+    </style>
+    <style name="ToolbarImageButtonStyle" parent="ImageButtonWithoutBackgroundStyle"/>
+
+    <!--text styles-->
+    <style name="BaseMediumTitleStyle">
+        <item name="fontFamily">Roboto</item>
+        <item name="android:fontWeight">@integer/font_weight_medium</item>
+    </style>
+    <style name="BaseRegularTitleStyle">
+        <item name="fontFamily">Roboto</item>
+        <item name="android:fontWeight">@integer/font_weight_regular</item>
+    </style>
+    <style name="LargeTitle1Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">20sp</item>
+    </style>
+    <style name="Title1Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="Title2Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Title3Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Title4Style" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="Text1Style" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="Caption1Style" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">10sp</item>
+    </style>
+    <style name="ButtonText1Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">12sp</item>
+    </style>
+    <style name="ButtonText2Style" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">14sp</item>
+    </style>
+    <style name="ElementTextStyle" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">9sp</item>
+    </style>
+    <style name="PriceTextStyle" parent="BaseMediumTitleStyle">
+        <item name="android:textSize">24sp</item>
+    </style>
+    <style name="PlaceHolderTextStyle" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">16sp</item>
+    </style>
+    <style name="LinkTextStyle" parent="BaseRegularTitleStyle">
+        <item name="android:textSize">10sp</item>
+    </style>
+
+    <!--buttons-->
+    <style name="BaseLargeButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">@drawable/button_large_background</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_height">@dimen/button_large_height</item>
+    </style>
+    <style name="LargeButtonTextAppearance" parent="ButtonText2Style">
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="SignInButton" parent="BaseLargeButtonStyle">
+        <item name="android:textAppearance">@style/LargeButtonTextAppearance</item>
+    </style>
+
+    <!--checkboxes-->
+    <style name="HeartCheckBoxStyle">
+        <item name="android:button">@drawable/checkbox_heart_button</item>
+        <item name="android:buttonTint">@color/checkbox_heart_tint_color</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:minHeight">0dp</item>
+    </style>
+    <style name="BaseTagCheckboxTextStyle" parent="Title4Style"/>
+    <style name="TagCheckboxDefaultTextStyle" parent="BaseTagCheckboxTextStyle">
+        <item name="android:textColor">@color/tag_checkbox_default_text_color</item>
+    </style>
+    <style name="TagCheckboxCheckedTextStyle" parent="BaseTagCheckboxTextStyle">
+        <item name="android:textColor">@color/tag_checkbox_checked_text_color</item>
+    </style>
+    <style name="TagCheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:drawableEnd">@drawable/small_close</item>
+        <item name="android:background">@drawable/checkbox_tag_background</item>
+        <item name="android:drawableTint">@drawable/checkbox_tag_text_color</item>
+        <item name="android:textColor">@drawable/checkbox_tag_text_color</item>
+        <item name="android:button">@null</item>
+        <item name="android:paddingStart">@dimen/tag_padding_start</item>
+        <item name="android:paddingEnd">@dimen/tag_padding_end</item>
+        <item name="android:paddingTop">@dimen/tag_padding_top</item>
+        <item name="android:paddingBottom">@dimen/tag_padding_bottom</item>
+        <item name="android:drawablePadding">@dimen/tag_drawable_padding</item>
+    </style>
+    <style name="BrandButtonTextStyle" parent="Title2Style">
+        <item name="android:textAllCaps">true</item>
+    </style>
+    <style name="DiscountLabelTextStyle" parent="ElementTextStyle">
+        <item name="android:textColor">@color/label_discount_text_color</item>
+    </style>
+    <style name="CatalogRatingTextStyle" parent="ElementTextStyle">
+        <item name="android:textColor">@color/rating_color</item>
+    </style>
+    <style name="FeedbackCountTextStyle" parent="ElementTextStyle">
+        <item name="android:textColor">@color/feedback_count_text_color</item>
+    </style>
+    <style name="ProductRatingTextStyle" parent="Text1Style">
+        <item name="android:textColor">@color/product_rating_text_color</item>
+    </style>
+    <style name="CatalogHeaderButtonTextStyle" parent="Title4Style">
+        <item name="android:textAllCaps">false</item>
+    </style>
+    <style name="CatalogPriceTextStyle" parent="ElementTextStyle">
+        <item name="android:textColor">@color/catalog_price_text_color</item>
+    </style>
+    <style name="CatalogPriceWithDiscountTextStyle" parent="Title2Style"/>
+    <style name="CatalogTitleTextStyle" parent="Title3Style"/>
+    <style name="CatalogSubtitleTextStyle" parent="Caption1Style"/>
+
+
+
+    <!--profile-->
+    <style name="ProfileItemTitleStyle" parent="Title2Style" />
+    <style name="ProfileItemSubtitleStyle" parent="Caption1Style">
+        <item name="android:textColor">@color/subtitle_profile_item_color</item>
+    </style>
+
+    <!--product-->
+    <style name="ProductRatingBarTheme" parent="Theme.AppCompat">
+        <item name="colorControlNormal">@color/grey</item> <!-- Цвет неактивных звезд -->
+        <item name="colorControlActivated">@color/rating_color</item>
+    </style>
+    <style name="ProductPriceTextStyle" parent="Caption1Style">
+        <item name="android:textColor">@color/text_button_product_price_color</item>
+    </style>
+</resources>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/label_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/discount_label_height"
+        android:background="@drawable/label_discount_background"
+        android:gravity="start"
+        android:paddingStart="@dimen/label_discount_padding_horizontal"
+        android:paddingEnd="@dimen/label_discount_padding_horizontal">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/discount_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/DiscountLabelTextStyle"
+            tools:text="-39%" />
+    </LinearLayout>
+</layout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="label_favorites">Избранное</string>
+    <string name="label_catalog">Каталог</string>
+    <string name="label_profile">Личный кабинет</string>
+    <string name="label_sign_in">Вход</string>
+    <string name="feedbacks_one">%1$d отзыв</string>
+    <string name="feedbacks_few">%1$d отзывa</string>
+    <string name="feedbacks_many">%1$d отзывов</string>
+    <string name="filters">Фильтры</string>
+    <string name="add_to_cart">Добавить в корзину</string>
+    <string name="price_format">%2$d%1$s</string>
+</resources>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="TagCheckBox">
+        <attr name="tagCheckBoxStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="BrandButton">
+        <attr name="brandName" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="UserProfileView">
+        <attr name="userName" format="string"/>
+        <attr name="userPhoneNumber" format="string"/>
+    </declare-styleable>
+
+    <declare-styleable name="DiscountLabel">
+        <attr name="discountValue" format="integer"/>
+    </declare-styleable>
+
+
+    <attr name="ratingValue" format="float"/>
+    <attr name="feedbackCount" format="integer"/>
+    <declare-styleable name="CatalogRatingView">
+        <attr name="ratingValue"/>
+        <attr name="feedbackCount"/>
+    </declare-styleable>
+
+    <declare-styleable name="ProductRatingView">
+        <attr name="ratingValue"/>
+        <attr name="feedbackCount"/>
+    </declare-styleable>
+
+    <declare-styleable name="AddToCartButton">
+        <attr name="price" format="integer"/>
+        <attr name="priceWithDiscount" format="integer"/>
+    </declare-styleable>
+</resources>

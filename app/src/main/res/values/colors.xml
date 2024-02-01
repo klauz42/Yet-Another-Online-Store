@@ -7,4 +7,42 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="grey">#FFA0A1A3</color>
+    <color name="light_grey">#FFF8F8F8</color>
+    <color name="dark_grey">#FF3E3E3E</color>
+    <color name="pink">#FFD62F89</color>
+    <color name="light_pink">#FFFF8AC9</color>
+    <color name="orange">#FFF9A249</color>
+    <color name="dark_blue">#FF52606D</color>
+
+
+    <color name="back_primary">@color/white</color>
+    <color name="text_on_primary">@color/black</color>
+
+    <color name="toolbar_color">@color/back_primary</color>
+    <color name="button_enabled_bg_color">@color/pink</color>
+    <color name="button_disabled_bg_color">@color/light_pink</color>
+    <color name="heart_color">@color/pink</color>
+    <color name="checkbox_heart_tint_color">@color/heart_color</color>
+    <color name="text_edit_sign_in_bg_color">@color/light_grey</color>
+    <color name="item_profile_bg_color">@color/light_grey</color>
+    <color name="button_brand_bg_color">@color/light_grey</color>
+    <color name="tag_checked_bg_color">@color/dark_blue</color>
+    <color name="tag_default_bg_color">@color/light_grey</color>
+    <color name="discount_label_bg_color">@color/pink</color>
+    <color name="button_add_product_bg_color">@color/pink</color>
+    <color name="pagination_ellipse_active_tint_color">@color/pink</color>
+    <color name="pagination_ellipse_tint_color">@color/light_grey</color>
+    <color name="text_input_layout_error_color">@color/orange</color>
+    <color name="tag_checkbox_default_text_color">@color/grey</color>
+    <color name="tag_checkbox_checked_text_color">@color/white</color>
+    <color name="subtitle_profile_item_color">@color/grey</color>
+    <color name="text_button_product_price_color">@color/light_pink</color>
+    <color name="label_discount_text_color">@color/white</color>
+    <color name="rating_color">@color/orange</color>
+    <color name="product_rating_text_color">@color/grey</color>
+    <color name="catalog_price_text_color">@color/grey</color>
+    <color name="feedback_count_text_color">@color/grey</color>
+
 </resources>

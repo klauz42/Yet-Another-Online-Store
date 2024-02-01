@@ -1,3 +1,15 @@
 <resources>
-    <string name="app_name">Yet Another Online Store</string>
+    <string name="app_name" translatable="false">Yet Another Online Store</string>
+    <string name="label_favorites">Favorites</string>
+    <string name="label_catalog">Catalog</string>
+    <string name="label_profile">Profile</string>
+    <string name="label_sign_in">Sign In</string>
+    <string name="discount_label" translatable="false">-%1$d%%</string>
+    <string name="feedbacks_one">%1$d feedback</string>
+    <string name="feedbacks_few">%1$d feedbacks</string>
+    <string name="feedbacks_many">%1$d feedbacks</string>
+    <string name="filters">Filters</string>
+    <string name="add_to_cart">Add to cart</string>
+    <string name="currency_symbol" translatable="false">₽</string>
+    <string name="price_format">%1$s%2$d</string>
 </resources>

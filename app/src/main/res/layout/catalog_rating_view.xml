@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:id="@+id/label_rating"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/catalog_rating_height"
+        android:gravity="start">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/small_star"
+            android:tint="@color/orange"/>
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/rating_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/CatalogRatingTextStyle"
+            tools:text="4.3" />
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/feedback_count"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textAppearance="@style/FeedbackCountTextStyle"
+            tools:text=" (51)" />
+    </LinearLayout>
+</layout>
