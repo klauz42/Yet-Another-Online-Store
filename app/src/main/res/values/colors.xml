@@ -18,7 +18,8 @@
 
 
     <color name="back_primary">@color/white</color>
-    <color name="text_on_primary">@color/black</color>
+    <color name="text_primary">@color/black</color>
+    <color name="text_secondary">@color/grey</color>
     <color name="transparent">#00000000</color>
 
 
@@ -48,5 +49,7 @@
     <color name="catalog_price_text_color">@color/grey</color>
     <color name="feedback_count_text_color">@color/grey</color>
     <color name="caption_text_color">@color/grey</color>
+    <color name="text_button_color">@color/grey</color>
+    <color name="divider_line_color">@color/light_grey</color>
 
 </resources>

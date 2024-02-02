@@ -23,4 +23,12 @@
     <string name="by_popularity">По популярности</string>
     <string name="descending_price">По убыванию цены</string>
     <string name="ascending_price">По возрастанию цены</string>
+    <string name="description">Описание</string>
+    <string name="hide">Скрыть</string>
+    <string name="more">Подробнее</string>
+    <string name="characteristics">Характеристики</string>
+    <string name="ingredients">Состав</string>
+    <string name="product_code">Артикул товара</string>
+    <string name="application_area">Область использования</string>
+    <string name="country_of_origin">Страна производства</string>
 </resources>

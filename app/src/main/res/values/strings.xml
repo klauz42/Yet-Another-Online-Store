@@ -25,4 +25,12 @@
     <string name="by_popularity">By popularity</string>
     <string name="descending_price">Descending price</string>
     <string name="ascending_price">Ascending price</string>
+    <string name="description">Description</string>
+    <string name="hide">Hide</string>
+    <string name="more">More</string>
+    <string name="characteristics">Characteristics</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="product_code">Product code</string>
+    <string name="application_area">Application area</string>
+    <string name="country_of_origin">Country of origin</string>
 </resources>

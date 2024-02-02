@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:orientation="vertical">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:layout_marginEnd="5dp"
+            tools:visibility="gone">
+
+            <!--            todo: remove after viewpager2 setting up-->
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/image_product"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/item_1"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/view_pager"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintDimensionRatio="1:1"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_chainStyle="packed" />
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/checkbox_like"
+                style="@style/HeartCheckBoxStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingHorizontal="3dp"
+                android:paddingVertical="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageButton
+                style="@style/ImageButtonWithoutBackgroundStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/question"
+                app:layout_constraintBottom_toBottomOf="@id/view_pager"
+                app:layout_constraintStart_toStartOf="@id/view_pager" />
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabDots"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_pager"
+                app:tabBackground="@drawable/tab_indicator_small_selector"
+                app:tabGravity="center"
+                app:tabIndicatorFullWidth="false"
+                app:tabIndicatorGravity="center"
+                app:tabIndicatorHeight="0dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textAppearance="@style/Text1Style"
+            android:textColor="@color/text_secondary"
+            tools:text="ADIDAS" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/subtitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/LargeTitle1Style"
+            tools:text="Я простой Иван город Тверь очень уважаю нефритовый стержень крепкий волос господин председатель" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textAppearance="@style/Text1Style"
+            android:textColor="@color/text_secondary"
+            tools:text="Доступно 30 штук" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/divider_line_color" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ProductRatingView
+            android:id="@+id/rating_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            app:feedbackCount="6"
+            app:ratingValue="3.6" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="16dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/price_with_discount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="11dp"
+                android:textAppearance="@style/PriceTextStyle"
+                tools:text="549 $" />
+
+            <ru.klauz42.yetanotheronlinestore.ui.DiagonalStrikeTextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginEnd="11dp"
+                android:textAppearance="@style/Text1Style"
+                android:textColor="@color/text_secondary"
+                tools:text="899 $" />
+
+            <ru.klauz42.yetanotheronlinestore.ui.DiscountLabel
+                android:id="@+id/discount"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/discount_label_height"
+                android:layout_gravity="center"
+                app:discountValue="39" />
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/description"
+            android:textAppearance="@style/Title1Style" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.BrandButton
+            android:id="@+id/button_brand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_brand_height"
+            android:layout_marginTop="16dp"
+            tools:brandName="ADIDAS" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/description_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:textAppearance="@style/Text1Style"
+            tools:text="Символ единицы измерения цены. Значение берется из поля price.unit. Символ единицы измерения отображается через пробел от старой цены и от новой цены. Для старой цены этот символ вместе ценой отображается зачеркнутым согласно макету." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_show_more_description"
+            style="@style/TextButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="@string/hide" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="34dp"
+            android:text="@string/characteristics"
+            android:textAppearance="@style/Title1Style" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.CharacteristicsWidget
+            android:id="@+id/characteristics"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            tools:application_area="Лицо"
+            tools:country_of_origin="Республика Корея"
+            tools:product_code="123123241" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginTop="32dp"
+            android:orientation="horizontal">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="1"
+                android:text="@string/ingredients"
+                android:textAppearance="@style/Title1Style" />
+
+            <androidx.appcompat.widget.AppCompatImageButton
+                android:id="@+id/button_copy_ingredients"
+                style="@style/ImageButtonWithoutBackgroundStyle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/copy" />
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/list_of_ingredients"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:textAppearance="@style/Text1Style"
+            tools:ellipsize="end"
+            tools:maxLines="2"
+            tools:text="Water, Propylene Glycol, Dipropylene Glycol, Lauric acid, Myristic Acid, Potassium Hydroxide, Lauryl Hydroxysultaine, Potassium Cocoate, Potassium Cocoyl Glycinate, Sodium Chloride, Glycerin, Phenoxyethanol, Chlorphenesin, Fragrance, Caprylyl Glycol, Ethylhexylglycerin, Capric acid, Palmitic Acid, Disodium EDTA, Sodium Bicarbonate, Cocamidopropyl Betaine, Butylene Glycol." />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_show_more_ingredients"
+            style="@style/TextButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            tools:text="@string/more" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.AddToCartButton
+            android:id="@+id/button_add_to_cart"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/button_large_height"
+            android:layout_marginTop="32dp"
+            android:layout_marginBottom="8dp"
+            tools:price="899"
+            tools:priceWithDiscount="549" />
+    </LinearLayout>
+</layout>

@@ -34,11 +34,22 @@
         <item name="android:background">?android:selectableItemBackground</item>
     </style>
 
+    <style name="TextButtonStyle" parent="Widget.AppCompat.ImageButton">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:background">?android:selectableItemBackground</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:minHeight">0dp</item>
+        <item name="android:minWidth">0dp</item>
+        <item name="android:textAppearance">@style/ButtonText1Style</item>
+        <item name="android:textColor">@color/text_button_color</item>
+    </style>
+
     <style name="ToolbarImageButtonStyle" parent="ImageButtonWithoutBackgroundStyle" />
 
     <style name="AppActionBarStyle" parent="ThemeOverlay.AppCompat.Dark.ActionBar">
         <item name="android:background">@color/transparent</item>
-        <item name="titleTextColor">@color/text_on_primary</item>
+        <item name="titleTextColor">@color/text_primary</item>
         <item name="elevation">0dp</item>
     </style>
 
