@@ -3,4 +3,5 @@
     <integer name="font_weight_regular">400</integer>
     <integer name="font_weight_medium">500</integer>
     <integer name="font_weight_bold">700</integer>
+    <integer name="catalog_product_rv_item_span_count">2</integer>
 </resources>

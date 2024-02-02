@@ -1,31 +1,22 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merge xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/ImageButtonWithoutBackgroundStyle"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:gravity="start"
+    android:orientation="horizontal">
 
-    <LinearLayout
+    <androidx.appcompat.widget.AppCompatImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        style="@style/ImageButtonWithoutBackgroundStyle"
-        android:gravity="start"
-        android:orientation="horizontal"
-        tools:layout_marginEnd="10dp"
-        tools:layout_marginStart="10dp"
-        tools:layout_marginTop="10dp">
+        android:layout_gravity="center"
+        android:src="@drawable/filter" />
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:src="@drawable/filter"
-            />
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/brand_name"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:textAppearance="@style/CatalogHeaderButtonTextStyle"
-            android:text="@string/filters" />
-    </LinearLayout>
-</merge>
-
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/brand_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/filters"
+        android:textAppearance="@style/CatalogHeaderButtonTextStyle" />
+</LinearLayout>

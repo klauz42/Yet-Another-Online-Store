@@ -8,18 +8,13 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:cardCornerRadius="@dimen/cardview_product_radius"
-        app:cardElevation="@dimen/cardview_product_elevation"
-        tools:layout_marginEnd="10dp"
-        tools:layout_marginStart="10dp"
-        tools:layout_marginTop="10dp"
-        tools:layout_width="168dp">
-
+        app:cardElevation="@dimen/cardview_product_elevation">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-<!--            todo: remove after viewpager2 setting up-->
+            <!--            todo: remove after viewpager2 setting up-->
             <androidx.appcompat.widget.AppCompatImageView
                 android:id="@+id/image_product"
                 android:layout_width="0dp"
@@ -43,8 +38,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed">
-            </androidx.viewpager2.widget.ViewPager2>
+                app:layout_constraintVertical_chainStyle="packed"></androidx.viewpager2.widget.ViewPager2>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/border_view_pager"
@@ -69,8 +63,8 @@
                 app:layout_constraintBottom_toTopOf="@id/border_view_pager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:tabGravity="center"
                 app:tabBackground="@drawable/tab_indicator_small_selector"
+                app:tabGravity="center"
                 app:tabIndicatorFullWidth="false"
                 app:tabIndicatorGravity="center"
                 app:tabIndicatorHeight="0dp" />
@@ -80,36 +74,39 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="6dp"/>
+                app:layout_constraintGuide_begin="6dp" />
+
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/border_end_padding"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="8dp"/>
+                app:layout_constraintGuide_end="8dp" />
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:gravity="start"
                 android:orientation="vertical"
-                app:layout_constraintTop_toBottomOf="@id/border_view_pager"
-                app:layout_constraintStart_toEndOf="@id/border_start_padding"
                 app:layout_constraintBottom_toTopOf="@id/button_add_to_cart"
                 app:layout_constraintEnd_toStartOf="@id/border_end_padding"
-                android:gravity="start">
+                app:layout_constraintStart_toEndOf="@id/border_start_padding"
+                app:layout_constraintTop_toBottomOf="@id/border_view_pager">
+
                 <ru.klauz42.yetanotheronlinestore.ui.DiagonalStrikeTextView
                     android:id="@+id/price"
-                    android:textAppearance="@style/CatalogPriceTextStyle"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
-                    tools:text="$ 899"/>
+                    android:textAppearance="@style/CatalogPriceTextStyle"
+                    tools:text="$ 899" />
+
                 <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginTop="2dp"
-                    android:gravity="start">
+                    android:gravity="start"
+                    android:orientation="horizontal">
 
                     <androidx.appcompat.widget.AppCompatTextView
                         android:id="@+id/price_with_discount"
@@ -119,31 +116,35 @@
                         android:layout_marginEnd="8dp"
                         android:textAppearance="@style/CatalogPriceWithDiscountTextStyle"
                         tools:text="$ 599" />
+
                     <ru.klauz42.yetanotheronlinestore.ui.DiscountLabel
                         android:id="@+id/discount"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/discount_label_height"
                         android:layout_gravity="center" />
                 </LinearLayout>
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/title_product"
-                    android:layout_marginTop="2dp"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_marginTop="2dp"
                     android:textAppearance="@style/CatalogTitleTextStyle"
-                    tools:text="ESFOLIO"/>
+                    tools:text="ESFOLIO" />
+
                 <androidx.appcompat.widget.AppCompatTextView
                     android:id="@+id/subtitle_product"
-                    android:layout_marginTop="2dp"
                     android:layout_width="wrap_content"
                     android:layout_height="37dp"
+                    android:layout_marginTop="2dp"
                     android:textAppearance="@style/CatalogSubtitleTextStyle"
-                    tools:text="Лосьон для тела`ESFOLIO` COENZYME Q 10 Увлажняющий 500 мл"/>
+                    tools:text="Лосьон для тела`ESFOLIO` COENZYME Q 10 Увлажняющий 500 мл" />
+
                 <ru.klauz42.yetanotheronlinestore.ui.CatalogRatingView
                     android:id="@+id/rating_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp"/>
+                    android:layout_marginTop="4dp" />
 
             </LinearLayout>
 
@@ -153,19 +154,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="horizontal"
-                app:layout_constraintBottom_toTopOf="@id/button_add_border"/>
+                app:layout_constraintBottom_toTopOf="@id/button_add_border" />
+
             <androidx.appcompat.widget.AppCompatImageButton
                 android:id="@+id/button_add_to_cart"
+                style="@style/ImageButtonWithoutBackgroundStyle"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:src="@drawable/button_add_small"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                style="@style/ImageButtonWithoutBackgroundStyle"
-                android:src="@drawable/button_add_small"/>
-
-
-
-
+                app:layout_constraintEnd_toEndOf="parent" />
         </androidx.constraintlayout.widget.ConstraintLayout>
 
     </androidx.cardview.widget.CardView>

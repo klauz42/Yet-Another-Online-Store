@@ -34,4 +34,8 @@
         <attr name="price" format="integer"/>
         <attr name="priceWithDiscount" format="integer"/>
     </declare-styleable>
+
+    <declare-styleable name="SortByButton">
+        <attr name="sortTitle" format="string"/>
+    </declare-styleable>
 </resources>

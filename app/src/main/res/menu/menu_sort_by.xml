@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/by_rating" android:title="@string/by_popularity"/>
+    <item android:id="@+id/descending_price" android:title="@string/descending_price"/>
+    <item android:id="@+id/ascending_price" android:title="@string/ascending_price"/>
+</menu>
