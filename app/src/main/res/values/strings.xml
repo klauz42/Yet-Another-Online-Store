@@ -12,4 +12,14 @@
     <string name="add_to_cart">Add to cart</string>
     <string name="currency_symbol" translatable="false">₽</string>
     <string name="price_format">%1$s%2$d</string>
+    <string name="label_first_name">First Name</string>
+    <string name="label_second_name">Second Name</string>
+    <string name="label_phone_number">Phone Number</string>
+    <string name="label_button_sign_in">Sign in</string>
+    <string name="by_clicking_on_the_sign_in_button_you_accept">By clicking on the Sign in button, you accept</string>
+    <string name="loyalty_program_link">
+        <![CDATA[
+            <a href="https://example.com">the terms of the loyalty program</a>
+        ]]>
+    </string>
 </resources>

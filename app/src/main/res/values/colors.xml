@@ -26,6 +26,7 @@
     <color name="heart_color">@color/pink</color>
     <color name="checkbox_heart_tint_color">@color/heart_color</color>
     <color name="text_edit_sign_in_bg_color">@color/light_grey</color>
+    <color name="text_edit_sign_hint_color">@color/grey</color>
     <color name="item_profile_bg_color">@color/light_grey</color>
     <color name="button_brand_bg_color">@color/light_grey</color>
     <color name="tag_checked_bg_color">@color/dark_blue</color>
@@ -44,5 +45,6 @@
     <color name="product_rating_text_color">@color/grey</color>
     <color name="catalog_price_text_color">@color/grey</color>
     <color name="feedback_count_text_color">@color/grey</color>
+    <color name="caption_text_color">@color/grey</color>
 
 </resources>

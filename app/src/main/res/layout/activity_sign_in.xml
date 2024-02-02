@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/toolbar_sign_in"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/first_name_input_layout"
+            style="@style/SignInTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="129dp"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@+id/header">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/first_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/label_first_name"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="4dp"
+                android:textAppearance="@style/PlaceHolderTextStyle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/second_name_input_layout"
+            style="@style/SignInTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@+id/first_name_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/second_name_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/label_second_name"
+                android:inputType="textPersonName|textCapWords"
+                android:padding="4dp"
+                android:text=""
+                android:textAppearance="@style/PlaceHolderTextStyle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/phone_number_input_layout"
+            style="@style/SignInTextInputLayoutStyle"
+            android:layout_width="0dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@+id/second_name_input_layout">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/phone_number_edit_text"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="@string/label_phone_number"
+                android:inputType="phone"
+                android:padding="4dp"
+                android:text=""
+                android:textAppearance="@style/PlaceHolderTextStyle" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/sign_in_button"
+            style="@style/SignInButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_large_height"
+            android:layout_marginTop="32dp"
+            android:text="@string/label_button_sign_in"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@+id/phone_number_input_layout"
+            tools:enabled="false" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/by_clicking_on_the_sign_in_button_you_accept"
+            android:textAppearance="@style/Caption1Style"
+            app:layout_constraintBottom_toTopOf="@id/link_loyalty_program"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/link_loyalty_program"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="11dp"
+            android:text="@string/loyalty_program_link"
+            android:textAppearance="@style/LinkTextStyle"
+            android:textColorLink="@color/caption_text_color"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/border_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/border_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
