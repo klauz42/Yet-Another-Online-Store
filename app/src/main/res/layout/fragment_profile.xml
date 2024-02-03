@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            android:id="@+id/header"
+            layout="@layout/toolbar_profile"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.UserProfileView
+            android:id="@+id/user_card"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/header"
+            app:userName="Иван Иванов"
+            app:userPhoneNumber="+79001234567" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ItemProfileView
+            android:id="@+id/favorites"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="8dp"
+            app:drawableStart="@drawable/item_profile_icon_heart"
+            app:isSubtitleVisible="true"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/user_card"
+            app:title="@string/favorites"
+            tools:subtitle="1 product" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ItemProfileView
+            android:id="@+id/stores"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="8dp"
+            app:drawableStart="@drawable/shop"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/favorites"
+            app:title="@string/stores" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ItemProfileView
+            android:id="@+id/feedback"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="8dp"
+            app:drawableStart="@drawable/feedback"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/favorites"
+            app:title="@string/feedback" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ItemProfileView
+            android:id="@+id/offer"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="8dp"
+            app:drawableStart="@drawable/offer"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/feedback"
+            app:title="@string/offer" />
+
+        <ru.klauz42.yetanotheronlinestore.ui.ItemProfileView
+            android:id="@+id/refund"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/itemview_profile_height"
+            android:layout_marginTop="8dp"
+            app:drawableStart="@drawable/refund"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start"
+            app:layout_constraintTop_toBottomOf="@id/offer"
+            app:title="@string/refund" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/button_sign_out"
+            style="@style/SignOutButton"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/button_large_height"
+            android:layout_marginBottom="32dp"
+            android:text="@string/sign_out"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/border_end"
+            app:layout_constraintStart_toEndOf="@id/border_start" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/border_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/border_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

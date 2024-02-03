@@ -45,4 +45,11 @@
         <attr name="applicationArea" format="string"/>
         <attr name="countryOfOrigin" format="string"/>
     </declare-styleable>
+
+    <declare-styleable name="ItemProfileView">
+        <attr name="drawableStart" format="reference"/>
+        <attr name="title" format="string"/>
+        <attr name="subtitle" format="string"/>
+        <attr name="isSubtitleVisible" format="boolean"/>
+    </declare-styleable>
 </resources>

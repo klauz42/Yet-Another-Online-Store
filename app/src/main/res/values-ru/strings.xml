@@ -31,4 +31,10 @@
     <string name="product_code">Артикул товара</string>
     <string name="application_area">Область использования</string>
     <string name="country_of_origin">Страна производства</string>
+    <string name="favorites">Избранное</string>
+    <string name="stores">Магазины</string>
+    <string name="refund">Обратная связь</string>
+    <string name="offer">Оферта</string>
+    <string name="feedback">Возврат товара</string>
+    <string name="sign_out">Выйти</string>
 </resources>

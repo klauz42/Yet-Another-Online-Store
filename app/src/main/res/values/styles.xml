@@ -136,6 +136,16 @@
         <item name="android:textAppearance">@style/SignInButtonTextAppearance</item>
     </style>
 
+
+    <style name="SignOutButtonTextAppearance" parent="LargeButtonTextAppearance">
+        <item name="android:textColor">@color/text_primary</item>
+    </style>
+
+    <style name="SignOutButton" parent="BaseLargeButtonStyle">
+        <item name="android:background">@color/light_grey</item>
+        <item name="android:textAppearance">@style/SignOutButtonTextAppearance</item>
+    </style>
+
     <style name="SignInTextInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
         <item name="android:layout_height">@dimen/text_input_sign_in_height</item>
         <item name="android:textColorHint">@color/text_edit_sign_hint_color</item>

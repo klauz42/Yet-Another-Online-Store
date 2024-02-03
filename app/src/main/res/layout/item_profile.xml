@@ -9,10 +9,7 @@
         android:background="@drawable/item_profile_background"
         android:gravity="start"
         android:paddingStart="@dimen/itemview_profile_padding"
-        android:paddingEnd="@dimen/itemview_profile_padding"
-        tools:layout_marginEnd="10dp"
-        tools:layout_marginStart="10dp"
-        tools:layout_marginTop="10dp">
+        android:paddingEnd="@dimen/itemview_profile_padding">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/item_icon"
@@ -44,8 +41,7 @@
                 android:layout_height="wrap_content"
                 android:textAppearance="@style/Caption1Style"
                 android:visibility="gone"
-                tools:text="1 товар"
-                tools:visibility="visible" />
+                tools:text="1 товар"/>
         </LinearLayout>
 
         <androidx.appcompat.widget.AppCompatImageView
