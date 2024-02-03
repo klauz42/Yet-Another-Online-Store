@@ -41,8 +41,8 @@
     </declare-styleable>
 
     <declare-styleable name="CharacteristicsWidget">
-        <attr name="product_code" format="string"/>
-        <attr name="application_area" format="string"/>
-        <attr name="country_of_origin" format="string"/>
+        <attr name="productCode" format="string"/>
+        <attr name="applicationArea" format="string"/>
+        <attr name="countryOfOrigin" format="string"/>
     </declare-styleable>
 </resources>

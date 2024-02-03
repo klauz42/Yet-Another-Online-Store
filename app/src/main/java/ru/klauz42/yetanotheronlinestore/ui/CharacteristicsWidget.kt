@@ -39,11 +39,11 @@ class CharacteristicsWidget @JvmOverloads constructor(
         attrs?.let {
             val typedArray =
                 context.obtainStyledAttributes(it, R.styleable.CharacteristicsWidget, 0, 0)
-            val productCode = typedArray.getString(R.styleable.CharacteristicsWidget_product_code)
+            val productCode = typedArray.getString(R.styleable.CharacteristicsWidget_productCode)
             val applicationArea =
-                typedArray.getString(R.styleable.CharacteristicsWidget_application_area)
+                typedArray.getString(R.styleable.CharacteristicsWidget_applicationArea)
             val countryOfOrigin =
-                typedArray.getString(R.styleable.CharacteristicsWidget_country_of_origin)
+                typedArray.getString(R.styleable.CharacteristicsWidget_countryOfOrigin)
             this.productCode = productCode
             this.applicationArea = applicationArea
             this.countryOfOrigin = countryOfOrigin

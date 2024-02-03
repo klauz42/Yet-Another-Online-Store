@@ -191,9 +191,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="16dp"
-            tools:application_area="Лицо"
-            tools:country_of_origin="Республика Корея"
-            tools:product_code="123123241" />
+            tools:applicationArea="Лицо"
+            tools:countryOfOrigin="Республика Корея"
+            tools:productCode="123123241" />
 
         <LinearLayout
             android:layout_width="match_parent"
