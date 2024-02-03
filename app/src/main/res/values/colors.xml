@@ -38,7 +38,7 @@
     <color name="button_add_product_bg_color">@color/pink</color>
     <color name="pagination_ellipse_active_tint_color">@color/pink</color>
     <color name="pagination_ellipse_tint_color">@color/light_grey</color>
-    <color name="text_input_layout_error_color">@color/orange</color>
+    <color name="error_color">@color/orange</color>
     <color name="tag_checkbox_default_text_color">@color/grey</color>
     <color name="tag_checkbox_checked_text_color">@color/white</color>
     <color name="subtitle_profile_item_color">@color/grey</color>

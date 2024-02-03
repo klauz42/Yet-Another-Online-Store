@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/destination_main"
+        android:icon="@drawable/destination_main"
+        android:title="@string/destination_main"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/destination_catalog"
+        android:icon="@drawable/destination_catalog"
+        android:title="@string/destination_catalog"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/destination_shopping_cart"
+        android:icon="@drawable/bag"
+        android:title="@string/destination_shopping_cart"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/destination_promotions"
+        android:icon="@drawable/destination_discount"
+        android:title="@string/destination_promotions"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/destination_profile"
+        android:icon="@drawable/destination_profile"
+        android:title="@string/destination_profile"
+        app:showAsAction="ifRoom" />
+</menu>

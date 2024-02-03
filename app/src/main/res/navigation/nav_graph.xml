@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/destination_main">
+
+    <fragment
+        android:id="@+id/destination_main"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.main.MainFragment"
+        android:label="@string/destination_main"
+        tools:layout="@layout/fragment_main">
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_catalog"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.catalog.CatalogFragment"
+        android:label="@string/destination_catalog"
+        tools:layout="@layout/fragment_stub">
+        <action
+            android:id="@+id/action_catalog_to_product"
+            app:destination="@id/destination_product"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_shopping_cart"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.shopping_cart.ShoppingCartFragment"
+        android:label="@string/destination_shopping_cart"
+        tools:layout="@layout/fragment_shopping_cart">
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_promotions"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.promotions.PromotionsFragment"
+        android:label="@string/destination_promotions"
+        tools:layout="@layout/fragment_promotions">
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_profile"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.profile.ProfileFragment"
+        android:label="@string/destination_profile"
+        tools:layout="@layout/fragment_profile">
+        <action
+            android:id="@+id/action_profile_to_favorites"
+            app:destination="@id/destination_favorites"/>
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/destination_product"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile">
+        <argument
+            android:name="product_id"
+            app:argType="string"
+            app:nullable="false"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/destination_favorites"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.favorites.FavoritesFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_stub">
+        <action
+            android:id="@+id/action_favorites_to_product"
+            app:destination="@id/destination_product"/>
+    </fragment>
+
+</navigation>

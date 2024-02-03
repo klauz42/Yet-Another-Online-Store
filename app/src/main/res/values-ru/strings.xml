@@ -37,4 +37,12 @@
     <string name="offer">Оферта</string>
     <string name="feedback">Возврат товара</string>
     <string name="sign_out">Выйти</string>
+    <string name="stub_main_page">Главная страница</string>
+    <string name="promotions">Акции</string>
+    <string name="shopping_cart">Корзина</string>
+    <string name="destination_main">Главная</string>
+    <string name="destination_catalog">Катало</string>
+    <string name="destination_shopping_cart">Корзина</string>
+    <string name="destination_promotions">Акции</string>
+    <string name="destination_profile">Профиль</string>
 </resources>

@@ -39,4 +39,12 @@
     <string name="offer">Offer</string>
     <string name="feedback">Feedback</string>
     <string name="sign_out">Sign Out</string>
+    <string name="stub_main_page">Main page</string>
+    <string name="promotions">Promotions</string>
+    <string name="shopping_cart">Shopping Cart</string>
+    <string name="destination_main">Main</string>
+    <string name="destination_catalog">Catalog</string>
+    <string name="destination_shopping_cart">Shopping cart</string>
+    <string name="destination_promotions">Promotions</string>
+    <string name="destination_profile">Profile</string>
 </resources>
