@@ -1,4 +1,4 @@
-package ru.klauz42.yetanotheronlinestore.presentation.catalog
+package ru.klauz42.yetanotheronlinestore.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -9,13 +9,13 @@ import ru.klauz42.yetanotheronlinestore.R
 
 class ImageCarouselAdapter(
     private val images: List<Int>,
-    private val onClickListener: () -> Unit
+    private val onClickListener: (() -> Unit)? = null
 ) :
     RecyclerView.Adapter<ImageCarouselAdapter.ViewHolder>() {
 
     inner class ViewHolder(val imageView: ImageView) : RecyclerView.ViewHolder(imageView) {
         init {
-            itemView.setOnClickListener { onClickListener() }
+            itemView.setOnClickListener { onClickListener?.invoke() }
         }
     }
 

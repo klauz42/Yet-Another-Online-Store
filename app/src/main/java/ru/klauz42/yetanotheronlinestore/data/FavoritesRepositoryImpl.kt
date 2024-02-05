@@ -2,6 +2,7 @@ package ru.klauz42.yetanotheronlinestore.data
 
 import kotlinx.coroutines.ExperimentalCoroutinesApi
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.flow.flatMapLatest
 import kotlinx.coroutines.flow.map
 import ru.klauz42.yetanotheronlinestore.domain.models.FavoritesRepository
@@ -27,6 +28,10 @@ class FavoritesRepositoryImpl @Inject constructor(
         return getFavorites().map { products ->
             products.map { it.id }
         }
+    }
+
+    override suspend fun isProductFavorite(id: String): Boolean {
+        return getFavoritesId().first().contains(id)
     }
 
     override suspend fun addProductIdToFavorites(id: String) {

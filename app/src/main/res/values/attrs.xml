@@ -32,8 +32,8 @@
     </declare-styleable>
 
     <declare-styleable name="AddToCartButton">
-        <attr name="price" format="integer"/>
-        <attr name="priceWithDiscount" format="integer"/>
+        <attr name="price" format="string"/>
+        <attr name="priceWithDiscount" format="string"/>
     </declare-styleable>
 
     <declare-styleable name="SortByButton">

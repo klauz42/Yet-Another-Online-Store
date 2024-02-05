@@ -8,6 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import ru.klauz42.yetanotheronlinestore.ViewModelFactory
 import ru.klauz42.yetanotheronlinestore.presentation.catalog.CatalogViewModel
+import ru.klauz42.yetanotheronlinestore.presentation.product.ProductViewModel
 import ru.klauz42.yetanotheronlinestore.presentation.signin.SignInViewModel
 import kotlin.reflect.KClass
 
@@ -25,6 +26,11 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(CatalogViewModel::class)
     fun bindCatalogViewModel(viewModel: CatalogViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(ProductViewModel::class)
+    fun bindProductViewModel(viewModel: ProductViewModel): ViewModel
 }
 
 @MustBeDocumented

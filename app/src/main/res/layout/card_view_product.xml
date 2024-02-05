@@ -6,7 +6,7 @@
     <data>
         <variable
             name="productItem"
-            type="ru.klauz42.yetanotheronlinestore.presentation.catalog.ProductWithImages" />
+            type="ru.klauz42.yetanotheronlinestore.presentation.ProductWithImages" />
         <variable
             name="checkBoxListener"
             type="ru.klauz42.yetanotheronlinestore.presentation.catalog.ProductsAdapter.FavoriteCheckListener" />
@@ -52,19 +52,20 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
+
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabDots"
-                android:layout_width="15dp"
-                android:layout_height="4dp"
-                android:layout_marginBottom="2dp"
                 android:background="@color/transparent"
-                app:layout_constraintBottom_toTopOf="@id/border_view_pager"
+                android:layout_width="wrap_content"
+                android:layout_height="8dp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/border_view_pager"
                 app:tabBackground="@drawable/tab_indicator_small_selector"
                 app:tabGravity="center"
                 app:tabIndicatorFullWidth="false"
-                app:tabIndicatorGravity="center"
+                app:tabMinWidth="0dp"
+                app:tabMaxWidth="0dp"
                 app:tabIndicatorHeight="0dp" />
 
             <androidx.constraintlayout.widget.Guideline

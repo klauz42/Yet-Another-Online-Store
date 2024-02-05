@@ -14,16 +14,16 @@ class AddToCartButton @JvmOverloads constructor(
 
     private var binding: AddToCartButtonBinding
 
-    var price: Int = 0
+    var price: String = ""
         set(value) {
             field = value
-            binding.price.text = formatPrice(value)
+            binding.price.text = value
         }
 
-    var priceWithDiscount: Int = 0
+    var priceWithDiscount: String = ""
         set(value) {
             field = value
-            binding.priceWithDiscount.text = formatPrice(value)
+            binding.priceWithDiscount.text = value
         }
 
 
@@ -33,20 +33,12 @@ class AddToCartButton @JvmOverloads constructor(
 
         attrs?.let {
             val typedArray = context.obtainStyledAttributes(it, R.styleable.AddToCartButton, 0, 0)
-            val price = typedArray.getInt(R.styleable.AddToCartButton_price, 0)
+            val price = typedArray.getString(R.styleable.AddToCartButton_price)
             val priceWithDiscount =
-                typedArray.getInt(R.styleable.AddToCartButton_priceWithDiscount, 0)
-            this.price = price
-            this.priceWithDiscount = priceWithDiscount
+                typedArray.getString(R.styleable.AddToCartButton_priceWithDiscount)
+            this.price = price ?: ""
+            this.priceWithDiscount = priceWithDiscount ?: ""
             typedArray.recycle()
         }
-    }
-
-    private fun formatPrice(price: Int): String {
-        return resources.getString(
-            R.string.price_format,
-            resources.getString(R.string.currency_symbol),
-            price,
-        )
     }
 }

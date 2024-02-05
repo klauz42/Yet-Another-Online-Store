@@ -16,7 +16,7 @@
         android:id="@+id/destination_catalog"
         android:name="ru.klauz42.yetanotheronlinestore.presentation.catalog.CatalogFragment"
         android:label="@string/destination_catalog"
-        tools:layout="@layout/fragment_stub">
+        tools:layout="@layout/fragment_product">
         <action
             android:id="@+id/action_catalog_to_product"
             app:destination="@id/destination_product"/>
@@ -49,7 +49,7 @@
 
     <fragment
         android:id="@+id/destination_product"
-        android:name="ru.klauz42.yetanotheronlinestore.presentation.profile.ProfileFragment"
+        android:name="ru.klauz42.yetanotheronlinestore.presentation.product.ProductFragment"
         android:label="Profile"
         tools:layout="@layout/fragment_profile">
         <argument

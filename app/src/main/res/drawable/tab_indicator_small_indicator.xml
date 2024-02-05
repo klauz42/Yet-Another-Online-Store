@@ -1,12 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetLeft="2dp"
-    android:insetRight="2dp">
-    <shape
-        android:shape="oval">
-        <size
-            android:width="4dp"
-            android:height="4dp" />
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
+    <shape android:shape="ring"
+        android:innerRadius="0dp"
+        android:thickness="2dp"
+        android:useLevel="false">
         <solid android:color="@color/light_grey" />
     </shape>
 </inset>
