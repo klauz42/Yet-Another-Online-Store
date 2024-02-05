@@ -47,7 +47,7 @@
     <dimen name="tag_drawable_padding">4dp</dimen>
     <dimen name="strikethrough_line_width">1dp</dimen>
     <dimen name="strikethrough_line_overlap">1dp</dimen>
-    <dimen name="catalog_product_rv_item_margin">7dp</dimen>
+    <dimen name="catalog_product_rv_item_margin">3dp</dimen>
     <dimen name="catalog_tag_rv_item_margin">6dp</dimen>
 
 </resources>

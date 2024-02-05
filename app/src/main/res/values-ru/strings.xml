@@ -20,7 +20,7 @@
             <a href="https://example.com">условия программы лояльности</a>
         ]]>
     </string>
-    <string name="by_popularity">По популярности</string>
+    <string name="by_rating">По популярности</string>
     <string name="descending_price">По убыванию цены</string>
     <string name="ascending_price">По возрастанию цены</string>
     <string name="description">Описание</string>

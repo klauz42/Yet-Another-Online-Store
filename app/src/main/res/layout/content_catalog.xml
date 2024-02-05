@@ -7,8 +7,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-
-
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_tags"
             android:layout_width="0dp"
@@ -21,13 +19,13 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent"
             tools:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-            tools:listitem="@layout/recycler_view_item_tag" />
+            tools:listitem="@layout/recycler_view_item_default_tag" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_products"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:layout_marginTop="32dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="29dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/border_end"
             app:layout_constraintStart_toEndOf="@id/border_start"

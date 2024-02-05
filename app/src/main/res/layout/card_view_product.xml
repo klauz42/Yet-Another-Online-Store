@@ -3,6 +3,15 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools">
 
+    <data>
+        <variable
+            name="productItem"
+            type="ru.klauz42.yetanotheronlinestore.presentation.catalog.ProductWithImages" />
+        <variable
+            name="checkBoxListener"
+            type="ru.klauz42.yetanotheronlinestore.presentation.catalog.ProductsAdapter.FavoriteCheckListener" />
+    </data>
+
     <androidx.cardview.widget.CardView
         android:id="@+id/product_card"
         android:layout_width="match_parent"
@@ -14,20 +23,6 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
-            <!--            todo: remove after viewpager2 setting up-->
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/image_product"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/item_1"
-                app:layout_constraintBottom_toTopOf="@id/border_view_pager"
-                app:layout_constraintDimensionRatio="7:6"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed" />
-
             <androidx.viewpager2.widget.ViewPager2
                 android:id="@+id/view_pager"
                 android:layout_width="0dp"
@@ -38,7 +33,7 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_chainStyle="packed"></androidx.viewpager2.widget.ViewPager2>
+                app:layout_constraintVertical_chainStyle="packed"/>
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/border_view_pager"
@@ -53,13 +48,16 @@
                 android:layout_height="wrap_content"
                 android:paddingHorizontal="3dp"
                 android:paddingVertical="8dp"
+                android:onCheckedChanged="@{(checkBoxView, isDone) -> checkBoxListener.onChecked(checkBoxView, productItem.product.id, isDone)}"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
 
             <com.google.android.material.tabs.TabLayout
                 android:id="@+id/tabDots"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="15dp"
+                android:layout_height="4dp"
+                android:layout_marginBottom="2dp"
+                android:background="@color/transparent"
                 app:layout_constraintBottom_toTopOf="@id/border_view_pager"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
@@ -99,6 +97,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:textAppearance="@style/CatalogPriceTextStyle"
+                    android:text="@{productItem.product.price.price + ' ' + productItem.product.price.unit}"
                     tools:text="$ 899" />
 
                 <LinearLayout
@@ -115,13 +114,15 @@
                         android:layout_gravity="center_vertical"
                         android:layout_marginEnd="8dp"
                         android:textAppearance="@style/CatalogPriceWithDiscountTextStyle"
+                        android:text="@{productItem.product.price.priceWithDiscount + ' ' + productItem.product.price.unit}"
                         tools:text="$ 599" />
 
                     <ru.klauz42.yetanotheronlinestore.ui.DiscountLabel
                         android:id="@+id/discount"
                         android:layout_width="wrap_content"
                         android:layout_height="@dimen/discount_label_height"
-                        android:layout_gravity="center" />
+                        android:layout_gravity="center"
+                        app:discountValue="@{productItem.product.price.discount}"/>
                 </LinearLayout>
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -130,6 +131,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginTop="2dp"
                     android:textAppearance="@style/CatalogTitleTextStyle"
+                    android:text="@{productItem.product.title}"
                     tools:text="ESFOLIO" />
 
                 <androidx.appcompat.widget.AppCompatTextView
@@ -138,13 +140,16 @@
                     android:layout_height="37dp"
                     android:layout_marginTop="2dp"
                     android:textAppearance="@style/CatalogSubtitleTextStyle"
+                    android:text="@{productItem.product.description}"
                     tools:text="Лосьон для тела`ESFOLIO` COENZYME Q 10 Увлажняющий 500 мл" />
 
                 <ru.klauz42.yetanotheronlinestore.ui.CatalogRatingView
                     android:id="@+id/rating_view"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginTop="4dp" />
+                    android:layout_marginTop="4dp"
+                    app:ratingValue="@{productItem.product.feedback.rating}"
+                    app:feedbackCount="@{productItem.product.feedback.count}"/>
 
             </LinearLayout>
 

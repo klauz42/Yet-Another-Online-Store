@@ -1,9 +1,12 @@
 package ru.klauz42.yetanotheronlinestore.di.components
 
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.ViewModelProvider
 import dagger.BindsInstance
 import dagger.Component
 import ru.klauz42.yetanotheronlinestore.di.scopes.ActivityScope
+import ru.klauz42.yetanotheronlinestore.domain.models.FavoritesRepository
+import ru.klauz42.yetanotheronlinestore.domain.models.ProductsRepository
 import ru.klauz42.yetanotheronlinestore.domain.models.UserPreferencesRepository
 import ru.klauz42.yetanotheronlinestore.presentation.MainActivity
 import ru.klauz42.yetanotheronlinestore.presentation.signin.SignInActivity
@@ -27,4 +30,7 @@ interface ActivityComponent {
     }
 
     fun getUserDataRepository(): UserPreferencesRepository
+    fun getViewModelFactory(): ViewModelProvider.Factory
+    fun getProductsRepository(): ProductsRepository
+    fun getFavoritesRepository(): FavoritesRepository
 }

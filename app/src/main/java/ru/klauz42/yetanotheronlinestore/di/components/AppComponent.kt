@@ -5,8 +5,13 @@ import dagger.Component
 import ru.klauz42.yetanotheronlinestore.MainApp
 import ru.klauz42.yetanotheronlinestore.di.modules.AppModule
 import ru.klauz42.yetanotheronlinestore.di.modules.DataStoreModule
+import ru.klauz42.yetanotheronlinestore.di.modules.DatabaseModule
+import ru.klauz42.yetanotheronlinestore.di.modules.FavoritesRepositoryModule
+import ru.klauz42.yetanotheronlinestore.di.modules.ProductsRepositoryModule
 import ru.klauz42.yetanotheronlinestore.di.modules.UserDataRepositoryModule
 import ru.klauz42.yetanotheronlinestore.di.modules.ViewModelModule
+import ru.klauz42.yetanotheronlinestore.domain.models.FavoritesRepository
+import ru.klauz42.yetanotheronlinestore.domain.models.ProductsRepository
 import ru.klauz42.yetanotheronlinestore.domain.models.UserPreferencesRepository
 import javax.inject.Singleton
 
@@ -18,6 +23,9 @@ import javax.inject.Singleton
         DataStoreModule::class,
         UserDataRepositoryModule::class,
         ViewModelModule::class,
+        ProductsRepositoryModule::class,
+        FavoritesRepositoryModule::class,
+        DatabaseModule::class
     ]
 )
 interface AppComponent {
@@ -30,4 +38,6 @@ interface AppComponent {
 
     fun getUserDataRepository(): UserPreferencesRepository
     fun getViewModelFactory(): ViewModelProvider.Factory
+    fun getProductsRepository(): ProductsRepository
+    fun getFavoritesRepository(): FavoritesRepository
 }

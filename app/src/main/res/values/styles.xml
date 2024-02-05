@@ -168,15 +168,22 @@
     <style name="HeartCheckBoxStyle">
         <item name="android:button">@drawable/checkbox_heart_button</item>
         <item name="android:buttonTint">@color/checkbox_heart_tint_color</item>
+        <item name="android:background">@android:color/transparent</item>
         <item name="android:minWidth">0dp</item>
         <item name="android:minHeight">0dp</item>
     </style>
 
     <style name="TagCheckboxTextStyle" parent="Title4Style" />
+    <style name="DefaultTagTextStyle" parent="Title4Style">
+        <item name="android:textColor">@color/tag_checkbox_default_text_color</item>
+    </style>
+    <style name="SelectedTagTextStyle" parent="Title4Style">
+        <item name="android:textColor">@color/tag_checkbox_checked_text_color</item>
+    </style>
 
     <style name="TagCheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
         <item name="android:drawableEnd">@drawable/small_close</item>
-        <item name="android:background">@drawable/checkbox_tag_background</item>
+        <item name="android:background">@drawable/checkbox_tag_background_selector</item>
         <item name="android:drawableTint">@drawable/checkbox_tag_text_color</item>
         <item name="android:textColor">@drawable/checkbox_tag_text_color</item>
         <item name="android:button">@null</item>

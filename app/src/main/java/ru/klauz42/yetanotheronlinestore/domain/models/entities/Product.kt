@@ -2,8 +2,10 @@ package ru.klauz42.yetanotheronlinestore.domain.models.entities
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.squareup.moshi.JsonClass
 
 @Entity(tableName = "products")
+@JsonClass(generateAdapter = true)
 data class Product(
     val available: Int = 0,
     val description: String = "",
