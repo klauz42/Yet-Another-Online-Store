@@ -3,17 +3,20 @@ package ru.klauz42.yetanotheronlinestore.presentation
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import kotlinx.coroutines.flow.first
+import kotlinx.coroutines.launch
 import kotlinx.coroutines.runBlocking
 import ru.klauz42.yetanotheronlinestore.R
 import ru.klauz42.yetanotheronlinestore.appComponent
 import ru.klauz42.yetanotheronlinestore.databinding.ActivityMainBinding
 import ru.klauz42.yetanotheronlinestore.di.components.ActivityComponent
 import ru.klauz42.yetanotheronlinestore.di.components.DaggerActivityComponent
+import ru.klauz42.yetanotheronlinestore.domain.models.FavoritesRepository
 import ru.klauz42.yetanotheronlinestore.domain.models.UserPreferencesRepository
 import ru.klauz42.yetanotheronlinestore.presentation.signin.SignInActivity
 import javax.inject.Inject
@@ -29,6 +32,9 @@ class MainActivity : AppCompatActivity() {
 
     @Inject
     lateinit var userDataRepository: UserPreferencesRepository
+
+    @Inject
+    lateinit var favoritesRepository: FavoritesRepository
 
     override fun onCreate(savedInstanceState: Bundle?) {
         activityComponent = DaggerActivityComponent.builder()
@@ -76,5 +82,16 @@ class MainActivity : AppCompatActivity() {
         startActivity(signInIntent)
         finish()
         return
+    }
+
+    fun signOut() {
+        lifecycleScope.launch {
+            userDataRepository.clearUserData()
+            favoritesRepository.clearFavorites()
+        }
+
+        val signInIntent = Intent(this, SignInActivity::class.java)
+        startActivity(signInIntent)
+        finish()
     }
 }

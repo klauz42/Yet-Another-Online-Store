@@ -35,7 +35,6 @@ class CatalogFragment
     val binding get() = _binding!!
 
     private lateinit var fragmentComponent: FragmentComponent
-    private val activity: MainActivity by lazy { requireActivity() as MainActivity }
 
     @Inject
     lateinit var viewModelFactory: ViewModelProvider.Factory
@@ -51,7 +50,8 @@ class CatalogFragment
         super.onCreate(savedInstanceState)
 
         fragmentComponent =
-            DaggerFragmentComponent.builder().activityComponent(activity.activityComponent).build()
+            DaggerFragmentComponent.builder()
+                .activityComponent((requireActivity() as MainActivity).activityComponent).build()
         fragmentComponent.inject(this)
     }
 

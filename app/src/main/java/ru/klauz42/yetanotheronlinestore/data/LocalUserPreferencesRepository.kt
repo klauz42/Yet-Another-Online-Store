@@ -35,4 +35,12 @@ class LocalUserPreferencesRepository @Inject constructor(private val dataStore: 
             preferences[PHONE_NUMBER_KEY] = userData.phoneNumber
         }
     }
+
+    override suspend fun clearUserData() {
+        dataStore.edit { preferences ->
+            preferences[FIRST_NAME_KEY] = ""
+            preferences[SECOND_NAME_KEY] = ""
+            preferences[PHONE_NUMBER_KEY] = ""
+        }
+    }
 }

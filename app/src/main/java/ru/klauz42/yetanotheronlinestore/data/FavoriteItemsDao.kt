@@ -18,4 +18,7 @@ interface FavoriteItemsDao {
 
     @Delete
     suspend fun deleteId(idEntity: FavoriteItemEntity)
+
+    @Query("DELETE FROM favorites_table")
+    suspend fun clearTable()
 }

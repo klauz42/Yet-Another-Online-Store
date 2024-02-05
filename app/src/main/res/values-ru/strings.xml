@@ -48,4 +48,7 @@
     <string name="available_one">Доступнa для заказа %1$d штукa</string>
     <string name="available_few">Доступно для заказа %1$d штуки</string>
     <string name="available_many">Доступно для заказа %1$d штук</string>
+    <string name="products_one">%1$d товар</string>
+    <string name="products_few">%1$d товара</string>
+    <string name="products_many">%1$d товаров</string>
 </resources>

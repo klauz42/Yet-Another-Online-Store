@@ -24,7 +24,6 @@ import javax.inject.Inject
 class ProductFragment : Fragment() {
 
     private lateinit var fragmentComponent: FragmentComponent
-    private val activity: MainActivity by lazy { requireActivity() as MainActivity }
 
     private var _binding: FragmentProductBinding? = null
     val binding get() = _binding!!
@@ -40,7 +39,8 @@ class ProductFragment : Fragment() {
         super.onCreate(savedInstanceState)
 
         fragmentComponent =
-            DaggerFragmentComponent.builder().activityComponent(activity.activityComponent).build()
+            DaggerFragmentComponent.builder()
+                .activityComponent((requireActivity() as MainActivity).activityComponent).build()
         fragmentComponent.inject(this)
     }
 

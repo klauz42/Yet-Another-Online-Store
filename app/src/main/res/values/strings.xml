@@ -50,4 +50,7 @@
     <string name="available_one">Available to order %1$d piece</string>
     <string name="available_few">Available to order %1$d pieces</string>
     <string name="available_many">Available to order %1$d pieces</string>
+    <string name="products_one">%1$d product</string>
+    <string name="products_few">%1$d products</string>
+    <string name="products_many">%1$d products</string>
 </resources>

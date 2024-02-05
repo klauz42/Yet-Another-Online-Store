@@ -41,4 +41,8 @@ class FavoritesRepositoryImpl @Inject constructor(
     override suspend fun removeProductIdToFavorites(id: String) {
         favoriteItemsDao.deleteId(FavoriteItemEntity(id))
     }
+
+    override suspend fun clearFavorites() {
+        favoriteItemsDao.clearTable()
+    }
 }

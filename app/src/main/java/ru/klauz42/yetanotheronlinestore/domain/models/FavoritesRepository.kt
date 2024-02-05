@@ -9,4 +9,5 @@ interface FavoritesRepository {
     suspend fun isProductFavorite(id: String): Boolean
     suspend fun addProductIdToFavorites(id: String)
     suspend fun removeProductIdToFavorites(id: String)
+    suspend fun clearFavorites()
 }
