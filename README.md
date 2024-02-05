@@ -12,9 +12,11 @@
 
 # Screenshots:
 <p float="left">
-  <img src="/screenshots/signin_screen_incorrect.jpg" height="400px"/>
-  <img src="/screenshots/signin_screen_correct.jpg" height="400px"/>
-  <img src="/screenshots/catalog_screen.jpg" height="400px"/>
-  <img src="/screenshots/profile_screen.jpg" height="400px"/>
-  <img src="/screenshots/favorites_screen.jpg" height="400px"/>
+  <img src="/screenshots/signin_screen_incorrect.jpg" height="450px"/>
+  <img src="/screenshots/signin_screen_correct.jpg" height="450px"/>
+  <img src="/screenshots/catalog_screen.jpg" height="450px"/>
+  <img src="/screenshots/product_screen_viewpager.jpg" height="450px"/>
+  <img src="/screenshots/product_screen_description.jpg" height="450px"/>
+  <img src="/screenshots/profile_screen.jpg" height="450px"/>
+  <img src="/screenshots/favorites_screen.jpg" height="450px"/>
 </p>
