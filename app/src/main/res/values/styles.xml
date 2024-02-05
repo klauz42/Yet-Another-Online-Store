@@ -101,6 +101,21 @@
         <item name="android:textSize">14sp</item>
     </style>
 
+    <style name="BaseFavoritesTabTextStyle" parent="TextAppearance.Design.Tab">
+        <item name="android:textSize">14sp</item>
+        <item name="textAllCaps">false</item>
+        <item name="fontFamily">Roboto</item>
+    </style>
+
+    <style name="DefaultFavoritesTabTextStyle" parent="BaseFavoritesTabTextStyle">
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:fontWeight">@integer/font_weight_regular</item>
+    </style>
+    <style name="SelectedFavoritesTabTextStyle" parent="BaseFavoritesTabTextStyle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:fontWeight">1000</item>
+    </style>
+
     <style name="ElementTextStyle" parent="BaseRegularTitleStyle">
         <item name="android:textSize">9sp</item>
     </style>

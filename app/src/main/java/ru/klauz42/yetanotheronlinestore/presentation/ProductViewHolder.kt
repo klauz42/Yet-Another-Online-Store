@@ -1,11 +1,9 @@
-package ru.klauz42.yetanotheronlinestore.presentation.catalog
+package ru.klauz42.yetanotheronlinestore.presentation
 
 import android.widget.CompoundButton
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.tabs.TabLayoutMediator
 import ru.klauz42.yetanotheronlinestore.databinding.CardViewProductBinding
-import ru.klauz42.yetanotheronlinestore.presentation.ImageCarouselAdapter
-import ru.klauz42.yetanotheronlinestore.presentation.ProductWithImages
 
 
 class ProductViewHolder(private val binding: CardViewProductBinding) :

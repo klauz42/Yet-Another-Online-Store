@@ -53,4 +53,6 @@
     <string name="products_one">%1$d product</string>
     <string name="products_few">%1$d products</string>
     <string name="products_many">%1$d products</string>
+    <string name="tab_products">Products</string>
+    <string name="tab_brands">Brands</string>
 </resources>

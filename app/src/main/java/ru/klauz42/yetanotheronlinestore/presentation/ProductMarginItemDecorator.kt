@@ -1,4 +1,4 @@
-package ru.klauz42.yetanotheronlinestore.presentation.catalog
+package ru.klauz42.yetanotheronlinestore.presentation
 
 import android.graphics.Rect
 import android.view.View

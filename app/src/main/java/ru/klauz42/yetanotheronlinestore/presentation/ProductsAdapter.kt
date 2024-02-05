@@ -1,4 +1,4 @@
-package ru.klauz42.yetanotheronlinestore.presentation.catalog
+package ru.klauz42.yetanotheronlinestore.presentation
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -7,7 +7,6 @@ import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import ru.klauz42.yetanotheronlinestore.databinding.CardViewProductBinding
 import ru.klauz42.yetanotheronlinestore.di.scopes.FragmentScope
-import ru.klauz42.yetanotheronlinestore.presentation.ProductWithImages
 import javax.inject.Inject
 
 

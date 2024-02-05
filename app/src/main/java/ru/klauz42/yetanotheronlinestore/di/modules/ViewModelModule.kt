@@ -8,6 +8,7 @@ import dagger.Module
 import dagger.multibindings.IntoMap
 import ru.klauz42.yetanotheronlinestore.ViewModelFactory
 import ru.klauz42.yetanotheronlinestore.presentation.catalog.CatalogViewModel
+import ru.klauz42.yetanotheronlinestore.presentation.favorites.FavoritesViewModel
 import ru.klauz42.yetanotheronlinestore.presentation.product.ProductViewModel
 import ru.klauz42.yetanotheronlinestore.presentation.profile.ProfileViewModel
 import ru.klauz42.yetanotheronlinestore.presentation.signin.SignInViewModel
@@ -37,6 +38,11 @@ interface ViewModelModule {
     @IntoMap
     @ViewModelKey(ProfileViewModel::class)
     fun bindProfileViewModel(viewModel: ProfileViewModel): ViewModel
+
+    @Binds
+    @IntoMap
+    @ViewModelKey(FavoritesViewModel::class)
+    fun bindFavoritesViewModel(viewModel: FavoritesViewModel): ViewModel
 }
 
 @MustBeDocumented

@@ -10,13 +10,14 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recycler_view_products"
             android:layout_width="0dp"
-            android:layout_height="0dp"
-            android:paddingTop="62dp"
+            android:layout_height="match_parent"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toStartOf="@id/border_end"
             app:layout_constraintStart_toEndOf="@id/border_start"
             app:layout_constraintTop_toTopOf="parent"
+            android:paddingTop="19dp"
             android:clipToPadding="false"
+            android:overScrollMode="never"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/card_view_product"
             tools:spanCount="2" />

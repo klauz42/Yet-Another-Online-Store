@@ -22,7 +22,9 @@ import ru.klauz42.yetanotheronlinestore.domain.models.entities.Product
 import ru.klauz42.yetanotheronlinestore.domain.models.entities.SortType
 import ru.klauz42.yetanotheronlinestore.domain.models.entities.TagCheckBoxItem
 import ru.klauz42.yetanotheronlinestore.presentation.MainActivity
+import ru.klauz42.yetanotheronlinestore.presentation.ProductMarginItemDecorator
 import ru.klauz42.yetanotheronlinestore.presentation.ProductWithImages
+import ru.klauz42.yetanotheronlinestore.presentation.ProductsAdapter
 import javax.inject.Inject
 
 

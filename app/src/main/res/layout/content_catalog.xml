@@ -30,6 +30,7 @@
             app:layout_constraintEnd_toStartOf="@id/border_end"
             app:layout_constraintStart_toEndOf="@id/border_start"
             app:layout_constraintTop_toBottomOf="@id/recycler_view_tags"
+            android:overScrollMode="never"
             tools:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
             tools:listitem="@layout/card_view_product"
             tools:spanCount="2" />

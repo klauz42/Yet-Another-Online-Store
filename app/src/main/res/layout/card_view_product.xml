@@ -9,7 +9,7 @@
             type="ru.klauz42.yetanotheronlinestore.presentation.ProductWithImages" />
         <variable
             name="checkBoxListener"
-            type="ru.klauz42.yetanotheronlinestore.presentation.catalog.ProductsAdapter.FavoriteCheckListener" />
+            type="ru.klauz42.yetanotheronlinestore.presentation.ProductsAdapter.FavoriteCheckListener" />
     </data>
 
     <androidx.cardview.widget.CardView

@@ -41,7 +41,7 @@
     <string name="promotions">Акции</string>
     <string name="shopping_cart">Корзина</string>
     <string name="destination_main">Главная</string>
-    <string name="destination_catalog">Катало</string>
+    <string name="destination_catalog">Каталог</string>
     <string name="destination_shopping_cart">Корзина</string>
     <string name="destination_promotions">Акции</string>
     <string name="destination_profile">Профиль</string>
@@ -51,4 +51,6 @@
     <string name="products_one">%1$d товар</string>
     <string name="products_few">%1$d товара</string>
     <string name="products_many">%1$d товаров</string>
+    <string name="tab_products">Продукты</string>
+    <string name="tab_brands">Бренды</string>
 </resources>
